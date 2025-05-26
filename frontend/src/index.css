@@ -28,7 +28,7 @@
   --color-brand-accent: #f5a697; /* Warm, soft coral accent */
   --color-highlight: var(--color-brand-accent); /* General highlight */
 
-  /* Tag Colors */
+  /* Tag colors */
   --color-tag-daily-bg: #e0f2f7;
   --color-tag-daily-text: #0277bd;
   --color-tag-daily-border: #b3e5fc;
@@ -51,7 +51,7 @@
   --color-streak-text: #c53900; /* Deep orange for streak text for contrast */
   --color-streak-bg: #ffccbc; /* Light, warm background for streak badge */
 
-  /* Button Colors */
+  /* Button colors */
   --color-button-complete-bg: #81c784; /* Softer, inviting green */
   --color-button-complete-text: var(--color-text-on-accent);
   --color-button-complete-hover-bg: #66bb6a;

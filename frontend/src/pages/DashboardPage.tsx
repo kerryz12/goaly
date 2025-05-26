@@ -6,7 +6,7 @@ import type { User, Goal, ShopItem } from "../types";
 import { mockUser, mockGoals, mockShopItems } from "../data";
 import {
   Header,
-  PetCard,
+  PetCard3D,
   TabNavigation,
   GoalList,
   AddGoalForm,
@@ -151,7 +151,7 @@ const DashboardPage: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-6">
           <div className="lg:col-span-1">
-            <PetCard pet={user.pet} />
+            <PetCard3D pet={user.pet} />
           </div>
 
           <div className="lg:col-span-3">

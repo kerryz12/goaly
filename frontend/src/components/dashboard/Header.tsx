@@ -1,4 +1,3 @@
-// src/components/dashboard/Header.tsx
 import React from "react";
 import { Star } from "lucide-react";
 import type { User } from "../../types";
@@ -8,7 +7,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ user }) => (
-  <div className="bg-gradient-to-br from-soft-pink via-muted-purple to-gentle-blue p-6 rounded-2xl mb-6 shadow-paper-md border-2 border-white/50">
+  <div className="bg-white p-6 rounded-2xl mb-6 shadow-paper-md border-2 border-white/50">
     <div className="flex items-center justify-between">
       <div className="flex items-center space-x-4">
         <div className="w-16 h-16 bg-paper-bg rounded-full flex items-center justify-center text-3xl shadow-paper-sm border-2 border-gray-200">

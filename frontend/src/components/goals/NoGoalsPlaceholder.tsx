@@ -1,4 +1,3 @@
-// src/components/goals/NoGoalsPlaceholder.tsx
 import React from "react";
 
 const NoGoalsPlaceholder: React.FC = () => (
