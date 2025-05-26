@@ -41,7 +41,7 @@ const TabNavigation: React.FC<TabNavigationProps> = ({
       {activeTab === "goals" && (
         <button
           onClick={onShowAddGoal}
-          className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 font-medium transition-colors"
+          className="bg-brand-accent hover:bg-brand-accent/80 hover:shadow-lg hover:scale-[1.02] duration-200 hover: cursor-pointer text-white px-4 py-2 rounded-full flex items-center space-x-2 font-medium transition-colors"
         >
           <Plus className="w-4 h-4" />
           <span>Add Goal</span>
