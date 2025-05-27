@@ -18,9 +18,9 @@ const TabNavigation: React.FC<TabNavigationProps> = ({
       <div className="flex space-x-4">
         <button
           onClick={() => onTabChange("goals")}
-          className={`px-4 py-2 rounded-full font-medium transition-colors ${
+          className={`px-4 py-2 rounded-full font-medium transition-colors hover: cursor-pointer ${
             activeTab === "goals"
-              ? "bg-blue-500 text-white"
+              ? "bg-brand-accent text-white"
               : "bg-gray-100 text-gray-600 hover:bg-gray-200"
           }`}
         >
@@ -28,9 +28,9 @@ const TabNavigation: React.FC<TabNavigationProps> = ({
         </button>
         <button
           onClick={() => onTabChange("shop")}
-          className={`px-4 py-2 rounded-full font-medium transition-colors ${
+          className={`px-4 py-2 rounded-full font-medium transition-colors hover: cursor-pointer ${
             activeTab === "shop"
-              ? "bg-blue-500 text-white"
+              ? "bg-brand-accent text-white"
               : "bg-gray-100 text-gray-600 hover:bg-gray-200"
           }`}
         >
