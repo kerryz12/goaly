@@ -9,8 +9,8 @@ export const mockUser: User = {
   avatar: "🌟",
   pet: {
     id: "1",
-    name: "Mochi",
-    type: "cat",
+    name: "Sus",
+    type: "capybara",
     color: "#FFB6C1",
     happiness: 85,
     level: 3,

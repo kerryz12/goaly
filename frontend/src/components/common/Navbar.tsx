@@ -30,14 +30,16 @@ export const Navbar: React.FC = () => {
             >
               <Target className="h-6 w-6 text-[var(--color-text-on-accent)]" />
             </div>
-            <h1 className="text-2xl font-bold text-[var(--color-text-heading)] font-display">
+            <a
+              href="/"
+              className="text-2xl font-bold text-[var(--color-text-heading)] font-display cursor-pointer hover:text-[var(--color-brand-accent)] transition-colors"
+            >
               Goaly
-            </h1>
+            </a>
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
-            <NavLink icon={Home} text="Dashboard" />
-            <NavLink icon={Target} text="Goals" />
+            <NavLink icon={Home} text="Dashboard" href="/" />
             <NavLink icon={Trophy} text="Achievements" />
             <NavLink icon={User} text="Pet" />
 
@@ -62,9 +64,12 @@ export const Navbar: React.FC = () => {
               </div>
             </div>
 
-            <button className="p-2 text-[var(--color-text-light)] hover:text-[var(--color-text-main)] hover:bg-[var(--color-bg-page)] rounded-lg transition-colors">
+            <a
+              href="/settings"
+              className="p-2 text-[var(--color-text-light)] hover:text-[var(--color-text-main)] hover:bg-[var(--color-bg-page)] rounded-lg transition-colors cursor-pointer"
+            >
               <Settings className="h-5 w-5" />
-            </button>
+            </a>
           </div>
 
           <div className="md:hidden">
@@ -84,8 +89,7 @@ export const Navbar: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-[var(--color-border-soft)] py-4">
             <div className="flex flex-col space-y-3">
-              <MobileNavLink icon={Home} text="Dashboard" />
-              <MobileNavLink icon={Target} text="Goals" />
+              <MobileNavLink icon={Home} text="Dashboard" href="/" />
               <MobileNavLink icon={Trophy} text="Achievements" />
               <MobileNavLink icon={User} text="Pet" />
 
@@ -110,10 +114,13 @@ export const Navbar: React.FC = () => {
                 </div>
               </div>
 
-              <button className="flex items-center space-x-3 p-3 text-[var(--color-text-light)] hover:text-[var(--color-text-main)] hover:bg-[var(--color-bg-page)] rounded-lg transition-colors">
+              <a
+                href="/settings"
+                className="flex items-center space-x-3 p-3 text-[var(--color-text-light)] hover:text-[var(--color-text-main)] hover:bg-[var(--color-bg-page)] rounded-lg transition-colors cursor-pointer"
+              >
                 <Settings className="h-5 w-5" />
                 <span className="font-medium">Settings</span>
-              </button>
+              </a>
             </div>
           </div>
         )}
@@ -123,12 +130,13 @@ export const Navbar: React.FC = () => {
 };
 
 // NavLink Component for Desktop
-const NavLink: React.FC<{ icon: React.ElementType; text: string }> = ({
-  icon: Icon,
-  text,
-}) => (
+const NavLink: React.FC<{
+  icon: React.ElementType;
+  text: string;
+  href?: string;
+}> = ({ icon: Icon, text, href = "#" }) => (
   <a
-    href="#"
+    href={href}
     className="flex items-center space-x-2 px-3 py-2 text-[var(--color-text-main)] hover:text-[var(--color-brand-accent)] hover:bg-[var(--color-bg-page)] rounded-lg transition-colors font-medium"
   >
     <Icon className="h-5 w-5" />
@@ -137,12 +145,13 @@ const NavLink: React.FC<{ icon: React.ElementType; text: string }> = ({
 );
 
 // NavLink Component for Mobile
-const MobileNavLink: React.FC<{ icon: React.ElementType; text: string }> = ({
-  icon: Icon,
-  text,
-}) => (
+const MobileNavLink: React.FC<{
+  icon: React.ElementType;
+  text: string;
+  href?: string;
+}> = ({ icon: Icon, text, href = "#" }) => (
   <a
-    href="#"
+    href={href}
     className="flex items-center space-x-3 p-3 text-[var(--color-text-main)] hover:text-[var(--color-brand-accent)] hover:bg-[var(--color-bg-page)] rounded-lg transition-colors font-medium"
   >
     <Icon className="h-5 w-5" />
