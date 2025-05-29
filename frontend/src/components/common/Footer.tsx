@@ -18,8 +18,8 @@ export const Footer: React.FC = () => {
               </h2>
             </div>
             <p className="text-[var(--color-text-light)] mb-4 max-w-md">
-              Your cozy companion for achieving goals and nurturing your virtual
-              pet. Turn your dreams into daily adventures! 🌟
+              Your cozy companion for achieving your goals. Turn your dreams
+              into daily adventures! 🌟
             </p>
             <div className="flex items-center space-x-2">
               <Heart className="h-4 w-4 text-[var(--color-brand-accent)]" />

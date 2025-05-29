@@ -33,27 +33,29 @@ function App() {
 
   return (
     <Router>
-      <div className="font-sans bg-bg-page text-text-main min-h-screen flex flex-col">
+      <div className="font-sans text-text-main min-h-screen flex flex-col bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
         <Navbar />
-        <main className="flex-grow container mx-auto px-4 py-6">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <DashboardPage currentUser={user} onUpdateUser={setUser} />
-              }
-            />
-            <Route
-              path="/settings"
-              element={
-                <SettingsPage
-                  onPetChange={handlePetChange}
-                  currentPetType={user.pet.type}
-                />
-              }
-            />
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
+        <main className="flex-grow">
+          <div className="container mx-auto px-4 py-6">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <DashboardPage currentUser={user} onUpdateUser={setUser} />
+                }
+              />
+              <Route
+                path="/settings"
+                element={
+                  <SettingsPage
+                    onPetChange={handlePetChange}
+                    currentPetType={user.pet.type}
+                  />
+                }
+              />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </div>
         </main>
         <Footer />
       </div>

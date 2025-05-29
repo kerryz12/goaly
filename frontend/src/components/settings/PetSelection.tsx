@@ -1,15 +1,14 @@
 import React from "react";
 import type { Pet } from "../../types";
 
+import catImg from "../../assets/pets/cat.png";
+import capybaraImg from "../../assets/pets/capybara.png";
+import monkeyImg from "../../assets/pets/monkey.png";
+
 const petOptions: Array<{ type: Pet["type"]; name: string; sprite: string }> = [
-  { type: "cat", name: "Cat", sprite: "../../assets/pets/cat.png" },
-  { type: "monkey", name: "Monkey", sprite: "../../assets/pets/monkey.png" },
-  {
-    type: "capybara",
-    name: "Capybara",
-    sprite: "../../assets/pets/capybara.png",
-  },
-  { type: "dog", name: "Dog", sprite: "../../assets/pets/dog.png" },
+  { type: "cat", name: "Cat", sprite: catImg },
+  { type: "monkey", name: "Monkey", sprite: monkeyImg },
+  { type: "capybara", name: "Capybara", sprite: capybaraImg },
 ];
 
 interface PetSelectionProps {
