@@ -6,7 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import { Navbar, Footer } from "./components";
-import { DashboardPage, SettingsPage } from "./pages";
+import { DashboardPage, SettingsPage, AchievementsPage } from "./pages";
 import type { User, Pet } from "./types";
 import { mockUser as initialMockUser } from "./data";
 
@@ -53,6 +53,7 @@ function App() {
                   />
                 }
               />
+              <Route path="/achievements" element={<AchievementsPage />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </div>

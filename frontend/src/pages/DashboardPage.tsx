@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import type { User, Goal, ShopItem, Pet } from "../types";
+import type { User, Goal, ShopItem } from "../types";
 import { mockGoals, mockShopItems } from "../data";
 import {
   Header,

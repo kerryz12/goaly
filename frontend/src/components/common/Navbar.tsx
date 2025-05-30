@@ -40,7 +40,7 @@ export const Navbar: React.FC = () => {
 
           <div className="hidden md:flex items-center space-x-6">
             <NavLink icon={Home} text="Dashboard" href="/" />
-            <NavLink icon={Trophy} text="Achievements" />
+            <NavLink icon={Trophy} text="Achievements" href="/achievements" />
             <NavLink icon={User} text="Pet" />
 
             <div className="flex items-center space-x-4 ml-6 pl-6 border-l border-[var(--color-border-medium)]">
@@ -90,7 +90,11 @@ export const Navbar: React.FC = () => {
           <div className="md:hidden border-t border-[var(--color-border-soft)] py-4">
             <div className="flex flex-col space-y-3">
               <MobileNavLink icon={Home} text="Dashboard" href="/" />
-              <MobileNavLink icon={Trophy} text="Achievements" />
+              <MobileNavLink
+                icon={Trophy}
+                text="Achievements"
+                href="/achievements"
+              />
               <MobileNavLink icon={User} text="Pet" />
 
               <div className="flex items-center justify-between pt-4 border-t border-[var(--color-border-soft)]">
