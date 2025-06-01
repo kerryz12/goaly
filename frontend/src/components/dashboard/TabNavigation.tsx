@@ -21,7 +21,7 @@ const TabNavigation: React.FC<TabNavigationProps> = ({
           className={`px-4 py-2 rounded-full font-medium transition-colors hover: cursor-pointer ${
             activeTab === "goals"
               ? "bg-brand-accent text-white"
-              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              : "bg-white text-gray-600 hover:bg-gray-200 border-1 border-border-card"
           }`}
         >
           My Goals
@@ -31,7 +31,7 @@ const TabNavigation: React.FC<TabNavigationProps> = ({
           className={`px-4 py-2 rounded-full font-medium transition-colors hover: cursor-pointer ${
             activeTab === "shop"
               ? "bg-brand-accent text-white"
-              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              : "bg-white text-gray-600 hover:bg-gray-200 border-1 border-border-card"
           }`}
         >
           Shop

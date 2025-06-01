@@ -48,7 +48,7 @@ const GoalCard: React.FC<GoalCardProps> = ({ goal, onComplete, onDelete }) => {
                   shadow-paper-sm hover:shadow-paper-md ${
                     goal.completed
                       ? "bg-paper-bg-completed border-border-card-completed opacity-80"
-                      : "bg-paper-bg hover:bg-paper-bg/80 border-border-card"
+                      : "bg-white hover:bg-paper-bg/80 border-border-card"
                   }`}
     >
       <div className="flex items-start justify-between mb-4">
@@ -91,7 +91,7 @@ const GoalCard: React.FC<GoalCardProps> = ({ goal, onComplete, onDelete }) => {
               onClick={() => onComplete(goal.id)}
               className="bg-button-complete-bg hover:bg-button-complete-hover-bg text-button-complete-text 
                          px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200 
-                         shadow-paper-lifted hover:shadow-paper-xs focus:outline-none focus:ring-2 focus:ring-button-complete-bg/50"
+                         shadow-paper-lifted hover:shadow-paper-xs focus:outline-none focus:ring-2 focus:ring-button-complete-bg/50 hover:cursor-pointer"
             >
               Complete
             </button>
@@ -103,7 +103,7 @@ const GoalCard: React.FC<GoalCardProps> = ({ goal, onComplete, onDelete }) => {
                        hover:bg-button-delete-bg hover:text-button-delete-text
                        w-10 h-10 flex items-center justify-center
                        rounded-full text-lg font-semibold transition-all duration-200 
-                       shadow-paper-lifted hover:shadow-paper-xs focus:outline-none focus:ring-2 focus:ring-button-delete-bg/50"
+                       shadow-paper-lifted hover:shadow-paper-xs focus:outline-none focus:ring-2 focus:ring-button-delete-bg/50 hover:cursor-pointer"
           >
             &times;
           </button>

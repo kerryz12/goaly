@@ -7,7 +7,7 @@ const AchievementsPage: React.FC = () => {
   const achievements: Achievement[] = mockAchievements; // Use the imported mock data
 
   return (
-    <div className="min-h-screen bg-bg-page p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-bg-page p-4 sm:p-6 lg:p-8 rounded-xl border-2 border-border-card">
       <div className="max-w-5xl mx-auto">
         <div
           className="bg-paper-bg p-6 sm:p-8 rounded-2xl shadow-paper-lg border border-border-card mb-8 
