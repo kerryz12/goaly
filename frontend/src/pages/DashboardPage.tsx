@@ -105,7 +105,6 @@ const DashboardPage: React.FC<DashboardPageProps> = ({
                 />
               ) : (
                 <ShopView
-                  items={shopItems}
                   userGold={currentUser.gold}
                   onPurchase={handlePurchaseItem}
                 />
