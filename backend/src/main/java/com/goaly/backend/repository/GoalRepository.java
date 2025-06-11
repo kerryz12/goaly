@@ -14,13 +14,13 @@ import java.util.List;
 
 @Repository
 public interface GoalRepository extends JpaRepository<Goal, Long> {
-    
-    Page<Goal> findByUserId(Long userId, Pageable pageable);
-    
+
+    List<Goal> findByUserId(Long userId);
+
     List<Goal> findByUserIdAndStatus(Long userId, GoalStatus status);
-    
+
     @Query("SELECT g FROM Goal g WHERE g.user.id = :userId AND g.targetDate <= :date AND g.status = 'ACTIVE'")
     List<Goal> findUpcomingGoalsByUserId(@Param("userId") Long userId, @Param("date") LocalDate date);
-    
+
     long countByUserIdAndStatus(Long userId, GoalStatus status);
 }
