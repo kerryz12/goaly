@@ -4,7 +4,7 @@ CREATE TABLE
         name VARCHAR(100) NOT NULL,
         description TEXT NOT NULL,
         criteria TEXT NOT NULL,
-        icon VARCHAR(50) NOT NULL DEFAULT '🏆',
+        icon VARCHAR(50) NOT NULL,
         points INTEGER NOT NULL DEFAULT 0,
         category VARCHAR(50),
         is_hidden BOOLEAN NOT NULL DEFAULT FALSE,
