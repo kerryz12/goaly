@@ -1,9 +1,8 @@
 package com.goaly.backend.service;
 
-import com.goaly.backend.dto.UserDto;
-import com.goaly.backend.entity.User;
-
 import java.util.List;
+
+import com.goaly.backend.dto.UserDto;
 
 public interface UserService {
 
