@@ -1,7 +1,7 @@
 CREATE TABLE
     achievements (
         id BIGSERIAL PRIMARY KEY,
-        name VARCHAR(100) NOT NULL,
+        name VARCHAR(64) NOT NULL,
         description TEXT NOT NULL,
         criteria TEXT NOT NULL,
         icon VARCHAR(50) NOT NULL,
