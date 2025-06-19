@@ -314,7 +314,6 @@ public class AchievementService {
                 .collect(Collectors.toList());
 
         // Simple achievement criteria checking based on achievement name/criteria
-        // This would be expanded based on your specific achievement requirements
         switch (achievement.getName()) {
             case "First Steps":
                 return !userGoals.isEmpty();
