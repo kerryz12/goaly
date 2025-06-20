@@ -1,5 +1,23 @@
 package com.goaly.backend.service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.goaly.backend.controller.AchievementController.CreateAchievementRequest;
 import com.goaly.backend.controller.AchievementController.UpdateAchievementRequest;
 import com.goaly.backend.dto.AchievementDto;
@@ -11,17 +29,6 @@ import com.goaly.backend.exception.ResourceNotFoundException;
 import com.goaly.backend.repository.AchievementRepository;
 import com.goaly.backend.repository.GoalRepository;
 import com.goaly.backend.repository.UserAchievementRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
-import java.util.*;
-import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -313,7 +320,6 @@ public class AchievementService {
                 .filter(goal -> Goal.GoalStatus.COMPLETED.equals(goal.getStatus()))
                 .collect(Collectors.toList());
 
-        // Simple achievement criteria checking based on achievement name/criteria
         switch (achievement.getName()) {
             case "First Steps":
                 return !userGoals.isEmpty();

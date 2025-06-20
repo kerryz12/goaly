@@ -9,7 +9,7 @@ export const mockAchievements: Achievement[] = [
     icon: "🎉",
     criteria: "Complete 1 goal.",
     points: 10,
-    unlockedAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000), // 2 days ago
+    unlockedAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000),
     category: "General",
   },
   {
@@ -80,7 +80,7 @@ export const mockAchievements: Achievement[] = [
     icon: "🌅",
     criteria: "Complete any goal before 8:00 AM.",
     points: 15,
-    unlockedAt: new Date(Date.now() - 24 * 60 * 60 * 1000), // Yesterday
+    unlockedAt: new Date(Date.now() - 24 * 60 * 60 * 1000),
     category: "Time-based",
   },
   {
