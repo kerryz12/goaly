@@ -44,14 +44,6 @@ public class CreateGoalRequest {
         this.description = description;
     }
 
-    public GoalPriority getPriority() {
-        return priority;
-    }
-
-    public void setPriority(GoalPriority priority) {
-        this.priority = priority;
-    }
-
     public LocalDate getTargetDate() {
         return targetDate;
     }

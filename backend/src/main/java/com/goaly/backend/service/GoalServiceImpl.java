@@ -40,7 +40,6 @@ public class GoalServiceImpl implements GoalService {
         Goal goal = new Goal();
         goal.setTitle(request.getTitle());
         goal.setDescription(request.getDescription());
-        goal.setPriority(request.getPriority());
         goal.setTargetDate(request.getTargetDate());
         goal.setUser(user);
 
@@ -87,9 +86,6 @@ public class GoalServiceImpl implements GoalService {
                 goal.setCompletionDate(LocalDate.now());
             }
         }
-        if (request.getPriority() != null) {
-            goal.setPriority(request.getPriority());
-        }
         if (request.getTargetDate() != null) {
             goal.setTargetDate(request.getTargetDate());
         }
@@ -132,7 +128,6 @@ public class GoalServiceImpl implements GoalService {
         dto.setTitle(goal.getTitle());
         dto.setDescription(goal.getDescription());
         dto.setStatus(goal.getStatus());
-        dto.setPriority(goal.getPriority());
         dto.setTargetDate(goal.getTargetDate());
         dto.setCompletionDate(goal.getCompletionDate());
         dto.setUserId(goal.getUser().getId());

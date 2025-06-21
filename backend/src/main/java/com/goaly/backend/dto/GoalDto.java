@@ -1,10 +1,10 @@
 package com.goaly.backend.dto;
 
-import com.goaly.backend.entity.Goal.GoalPriority;
-import com.goaly.backend.entity.Goal.GoalStatus;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+
+import com.goaly.backend.entity.Goal.GoalPriority;
+import com.goaly.backend.entity.Goal.GoalStatus;
 
 public class GoalDto {
 
@@ -55,14 +55,6 @@ public class GoalDto {
 
     public void setStatus(GoalStatus status) {
         this.status = status;
-    }
-
-    public GoalPriority getPriority() {
-        return priority;
-    }
-
-    public void setPriority(GoalPriority priority) {
-        this.priority = priority;
     }
 
     public LocalDate getTargetDate() {

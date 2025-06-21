@@ -4,7 +4,6 @@ CREATE TABLE
         title VARCHAR(200) NOT NULL,
         description TEXT,
         status VARCHAR(20) NOT NULL DEFAULT 'ACTIVE',
-        priority VARCHAR(20) NOT NULL DEFAULT 'MEDIUM',
         target_date DATE,
         completion_date DATE,
         user_id BIGINT NOT NULL,
@@ -17,8 +16,7 @@ CREATE TABLE
             CONSTRAINT fk_goals_user FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
             CONSTRAINT chk_status CHECK (
                 status IN ('ACTIVE', 'COMPLETED', 'PAUSED', 'CANCELLED')
-            ),
-            CONSTRAINT chk_priority CHECK (priority IN ('LOW', 'MEDIUM', 'HIGH'))
+            )
     );
 
 CREATE INDEX idx_goals_user_id ON goals (user_id);
